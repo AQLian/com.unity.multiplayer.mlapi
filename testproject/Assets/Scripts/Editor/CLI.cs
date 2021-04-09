@@ -1,4 +1,5 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 
 namespace TestProject.Editor
@@ -10,6 +11,13 @@ namespace TestProject.Editor
             var logLine = $"{nameof(CLI)}.{nameof(ThingsForFun)}()";
             Console.WriteLine(logLine);
             Debug.Log(logLine);
+
+            EditorPrefs.SetString("kScriptsDefaultApp", "code");
+            Unity.CodeEditor.CodeEditor.CurrentEditor.SyncAll();
+            EditorApplication.Exit(0);
+
+            Console.WriteLine($"POST-QUIT {logLine}");
+            Debug.Log($"POST-QUIT {logLine}");
         }
     }
 }
