@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace testproject.Editor
+namespace TestProject.Editor
 {
     public class CLI
     {
