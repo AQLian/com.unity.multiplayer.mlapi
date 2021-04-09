@@ -12,7 +12,7 @@ namespace TestProject.Editor
             Console.WriteLine(logLine);
             Debug.Log(logLine);
 
-            EditorPrefs.SetString("kScriptsDefaultApp", "code.app");
+            EditorPrefs.SetString("kScriptsDefaultApp", "rider");
             Unity.CodeEditor.CodeEditor.CurrentEditor.SyncAll();
             EditorApplication.Exit(0);
 
