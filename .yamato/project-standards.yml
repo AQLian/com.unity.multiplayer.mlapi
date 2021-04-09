@@ -8,7 +8,7 @@ standards_{{ projects.first.name }}:
     flavor: b1.small
   commands:
     - dotnet --version
-    - dotnet tool -g install dotnet-format
+    - dotnet tool install -g dotnet-format
     - $HOME/.dotnet/tools/dotnet-format --version
     - python3 --version
     - pip install unity-downloader-cli --upgrade --index-url https://artifactory.prd.it.unity3d.com/artifactory/api/pypi/pypi/simple
