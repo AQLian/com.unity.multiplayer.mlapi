@@ -9,4 +9,4 @@ standards_{{ projects.first.name }}:
   commands:
     - dotnet --version
     - dotnet tool install -g dotnet-format
-    - dotnet format --version
+    - dotnet-format --version
