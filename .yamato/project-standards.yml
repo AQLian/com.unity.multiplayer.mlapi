@@ -8,9 +8,9 @@ standards_{{ projects.first.name }}:
     flavor: b1.small
   commands:
     - dotnet --version
-    # - dotnet tool install -g dotnet-format
-    # - dotnet-format --version
+    - dotnet tool install dotnet-format --tool-path .
+    - dotnet-format --version
     - pip install unity-downloader-cli --upgrade --index-url https://artifactory.prd.it.unity3d.com/artifactory/api/pypi/pypi/simple
-    - unity-downloader-cli -u trunk -c editor --wait --fast
+    - unity-downloader-cli -u {{ test_editors.first }} -c editor --wait --fast
     - .Editor/Unity -batchmode -nographics -logFile - -executeMethod UnityEditor.SyncVS.SyncSolution -projectPath {{ projects.first.path }} -quit
-    # - ./standards.py --check
+    - ./standards.py --check
