@@ -13,6 +13,8 @@ standards_{{ projects.first.name }}:
     - pip install unity-downloader-cli --upgrade --index-url https://artifactory.prd.it.unity3d.com/artifactory/api/pypi/pypi/simple
     - unity-downloader-cli -u {{ test_editors.first }} -c editor --wait --fast
     - .Editor/Unity -batchmode -nographics -logFile - -executeMethod UnityEditor.SyncVS.SyncSolution -projectPath {{ projects.first.path }} -quit
-    - ls -l {{ projects.first.path }}
+    - lsa
+    - lsa {{ projects.first.path }}
+    - lsa .Editor
     - $HOME/.dotnet/tools/dotnet-format ./{{ projects.first.path }}/{{ projects.first.path }}.sln --fix-whitespace --fix-style error --check
     # - ./standards.py --check
