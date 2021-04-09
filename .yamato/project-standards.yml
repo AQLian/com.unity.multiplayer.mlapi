@@ -1,7 +1,7 @@
 {% metadata_file .yamato/project.metafile %}
 ---
 standards_{{ projects.first.name }}:
-  name: Standards Check {{ project.name }}
+  name: Standards Check {{ projects.first.name }}
   agent:
     type: Unity::VM
     image: package-ci/ubuntu:stable
