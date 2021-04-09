@@ -8,4 +8,5 @@ standards_{{ projects.first.name }}:
     flavor: b1.small
   commands:
     - dotnet --version
+    - dotnet tool install -g dotnet-format
     - dotnet-format --version
